@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Teacher's Day</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>back</title>
-  <link rel="stylesheet" href="./style.css">
+  <body>
+    <div class="des1" onclick="window.open('./Unity.html','page1','width=200 height=600 left=100 resizable=no')"></div>
+    <div class="des2" onclick="window.open('./Love.html','page2','width=200 height=600 left=1000 resizable=no');return false"></div>
 
-</head>
+    <style>
+      .des1 {
+        float: left;
+        position: relative;
+        background-image: url(./Heart1.png);
+      }
 
-<body>
-  <div class="des1" onclick="window.open('./Unity.html','page1','width=200 height=600 left=50 resizable=no')"></div>
-  <div class="des2"
-    onclick="window.open('./Love.html','page2','width=200 height=600 left=150 resizable=no');return false"></div>
+      .des2 {
+        float: left;
+        position: relative;
+        background-image: url(./Heart2.png);
+      }
 
-  <style>
-    .des1 {
-      float: left;
-      position: relative;
-      background-image: url(./Heart1.png);
-    }
+      div {
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+      }
 
-    .des2 {
-      float: left;
-      position: relative;
-      background-image: url(./Heart2.png);
-    }
+      html,
+      body {
+        -ms-overflow-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-    div {
-      background-size: cover;
-      width: 100px;
-      height: 100px;
-    }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
 
-    html,
-    body {
-      -ms-overflow-style: none;
-      margin: 0;
-      padding: 0;
-    }
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="./script.js"></script>
 
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  </style>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src="./script.js"></script>
-
-</body>
+  </body>
 
 </html>
