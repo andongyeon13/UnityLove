@@ -3,30 +3,124 @@
   <head>
     <meta charset="UTF-8">
     <title>Teacher's Day</title>
-    <link rel="stylesheet" href="./style.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+      body {
+      font-family: 'Dongle', sans-serif;
+      font-size: 2em;
+        background-image: url("back.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+
+      .leaf {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-size: cover;
+        animation: falling-leaf 5s linear infinite;
+      }
+
+      .leaf1 {
+        background-image: url("flower1.png");
+        top: -50px;
+        left: 35%;
+        animation-delay: 3s;
+      }
+
+      .leaf2 {
+        background-image: url("flower2.png");
+        top: -100px;
+        left: 40%;
+        animation-delay: 0s;
+      }
+
+      .leaf3 {
+        background-image: url("flower3.png");
+        top: -150px;
+        left: 60%;
+        animation-delay: 4s;
+      }
+
+      .leaf4 {
+        background-image: url("flower4.png");
+        top: -150px;
+        left: 65%;
+        animation-delay: 1.5s;
+      }
+
+      .leaf5 {
+        background-image: url("flower5.png");
+        top: -150px;
+        left: 70%;
+        animation-delay: 9s;
+      }
+
+      .leaf6 {
+        background-image: url("flower1.png");
+        top: -150px;
+        left: 50%;
+        animation-delay: 2s;
+      }
+
+      .leaf7 {
+        background-image: url("flower5.png");
+        top: -150px;
+        left: 30%;
+        animation-delay: 6s;
+      }
+
+      @keyframes falling-leaf {
+        0% {
+          transform: translateY(-50px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(1000px);
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
 
   <body>
+
+
     <div class="des1" onclick="window.open('./Unity.html','page1','width=200 height=600 left=100 resizable=no')"></div>
     <div class="des2" onclick="window.open('./Love.html','page2','width=200 height=600 left=1000 resizable=no');return false"></div>
+    </br></br>
+    </br></br>
+    </br>※ 소리를 켠 후 전체 화면으로 진행해주세요.</br>
+    </br>※ html을 방금 배운 사람이 만든 사이트라 조잡할 수 있습니다. (너그러히 이해해 주세요..ㅎ)</br>
+    </br>[진행방법]: 옆에 보이는 하트의 왼쪽과 오른쪽을 클릭한 후, 하트를 하나로 합쳐주세요.</br>
+    <div class="leaf leaf1"></div>
+    <div class="leaf leaf2"></div>
+    <div class="leaf leaf3"></div>
+    <div class="leaf leaf4"></div>
+    <div class="leaf leaf5"></div>
+    <div class="leaf leaf6"></div>
+    <div class="leaf leaf7"></div>
+
 
     <style>
       .des1 {
         float: left;
         position: relative;
         background-image: url(./Heart1.png);
+        animation: falling-leaves 20s linear infinite;
       }
 
       .des2 {
         float: left;
         position: relative;
         background-image: url(./Heart2.png);
+        animation: falling-leaves 20s linear infinite;
       }
 
       div {
         background-size: cover;
-        width: 100px;
-        height: 100px;
+        width: 400px;
+        height: 800px;
       }
 
       html,
@@ -42,7 +136,6 @@
     </style>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src="./script.js"></script>
 
   </body>
 
