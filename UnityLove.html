@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UnityLove</title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+
+      var heart2Window = window.open("Unity.html", "_blank");
+      if (heart2Window != null) {
+          heart2Window.close();
+       }
+
+      var images = [
+        "Msg1.png",
+        "Msg2.png",
+        "Msg3.png",
+        "Msg4.png",
+        "Msg5.png",
+      ];
+
+      var currentImageIndex = 0;
+
+      function changeImage() {
+        var imageElement = document.getElementById("image");
+        currentImageIndex++;
+
+        if (currentImageIndex >= images.length) {
+          currentImageIndex = 0;
+        }
+
+        var imagePath = images[currentImageIndex];
+        imageElement.src = imagePath;
+      }
+
+      var imageChangeInterval = setInterval(changeImage, 1000);
+    </script>
+  </head>
+
+  <body onresize="resizeTo(900,900)" onload="resizeTo(900,900)">
+    <img id="image" src="Msg1.png" alt="이미지" />
+  </body>
+</html>
