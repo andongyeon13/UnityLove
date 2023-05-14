@@ -44,10 +44,10 @@
 
 	  second.addCallback('Open', function (lock) {
 	    if (lock == 1) {
-	      $('.box').attr('style', 'background-image: url("./Heart1.png");');
+	      $('.box').attr('style', 'background-image: url("./Heart2.png");');
 	    }
 	    else if (lock == 0) {
-          $('.box').attr('style', 'background-image: url("./2.png");');
+          $('.box').attr('style', 'background-image: url("./Msg2.png");');
         }
 	  });
 
@@ -72,14 +72,14 @@
 
 	div {
 		background-size: cover;
-		width: 850px !important;
-		height: 1700px !important;
+		width: 450px !important;
+		height: 900px !important;
 		float: left;
 		position: relative;
 	}
   </style>
 
-  <body onresize="resizeTo(850,1700)" onload="resizeTo(850,1700)">
-  	<div class="box box23 non1 non2 non3" style="background-image: url('./Heart1.png');"></div>
+  <body onresize="resizeTo(450,900)" onload="resizeTo(450,900)">
+  	<div class="box box23 non1 non2 non3" style="background-image: url('./Heart2.png');"></div>
   </body>
 </html>
