@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unity</title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8" />
+    <script src="LocalConnection.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      var first = new LocalConnection({
+                  name: 'first',
+                  debug: true
+      });
+
+      first.listen();
+
+      first.addCallback('firstScreen', function (R1, L1, T1, B1) {
+
+        var R2 = window.screenLeft + window.outerWidth;
+        var L2 = window.screenLeft;
+        var T2 = window.screenTop + window.outerHeight - window.innerHeight;
+        var B2 = window.screenTop + window.outerHeight;
+        console.log(T1, T2, L1, R2);
+        if (Math.abs([T1 - T2]) < 30 && Math.abs([L1 - R2]) < 30) {
+          var second = new LocalConnection({
+                      name: 'second',
+                      debug: true
+          });
+          this.edge = function () {
+            var lock = 0;
+            second.send('Open', lock);
+            setTimeout(this.edge, 20);
+          }
+          setTimeout(this.edge, 20);
+        }
+
+        else {
+          var second = new LocalConnection({
+                      name: 'second',
+                      debug: true
+          });
+          this.edge = function () {
+            var lock = 1;
+            second.send('Open', lock);
+            setTimeout(this.edge, 20);
+          }
+          setTimeout(this.edge, 20);
+        }
+
+      });
+
+      window.setTimeout('window.location.reload()', 10000);
+    </script>
+
+  </head>
+  <body>
+
+  </body>
+</html>
