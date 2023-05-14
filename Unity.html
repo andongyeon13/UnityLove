@@ -27,7 +27,7 @@
                       debug: true
           });
           this.edge = function () {
-            $('.box').attr('style', 'background-image: url("./Msg1.png");');
+            window.open('./UnityLove.html','page1','width=900 height=900 left=L1 resizable=no')
             var lock = 0;
             second.send('Open', lock);
             setTimeout(this.edge, 20);
@@ -65,7 +65,6 @@
 		padding: 0;
 	}
 
-
 	::-webkit-scrollbar {
 		display: none;
 	}
@@ -80,6 +79,6 @@
   </style>
 
   <body onresize="resizeTo(450,900)" onload="resizeTo(450,900)">
-  	<div class="box box23 non1 non2 non3" style="background-image: url('./Heart1.png');"></div>
+  	<div class="box" style="background-image: url('./Heart1.png');"></div>
   </body>
 </html>
