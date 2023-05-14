@@ -27,6 +27,7 @@
                       debug: true
           });
           this.edge = function () {
+            $('.box').attr('style', 'background-image: url("./Msg1.png");');
             var lock = 0;
             second.send('Open', lock);
             setTimeout(this.edge, 20);
@@ -40,6 +41,7 @@
                       debug: true
           });
           this.edge = function () {
+            $('.box').attr('style', 'background-image: url("./Heart1.png");');
             var lock = 1;
             second.send('Open', lock);
             setTimeout(this.edge, 20);
@@ -53,7 +55,31 @@
     </script>
 
   </head>
-  <body>
 
+    <style>
+
+	html,
+	body {
+		-ms-overflow-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	div {
+		background-size: cover;
+		width: 450px !important;
+		height: 900px !important;
+		float: left;
+		position: relative;
+	}
+  </style>
+
+  <body onresize="resizeTo(450,900)" onload="resizeTo(450,900)">
+  	<div class="box box23 non1 non2 non3" style="background-image: url('./Heart1.png');"></div>
   </body>
 </html>
