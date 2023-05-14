@@ -13,11 +13,25 @@
        }
 
       var images = [
-        "Msg1.png",
-        "Msg2.png",
-        "Msg3.png",
-        "Msg4.png",
-        "Msg5.png",
+        "1.png",
+        "7.png",
+        "12.png",
+        "17.png",
+        "2.png",
+        "8.png",
+        "13.png",
+        "18.png",
+        "3.png",
+        "9.png",
+        "14.png",
+        "19.png",
+        "4.png",
+        "10.png",
+        "11.png",
+        "15.png",
+        "16.png",
+        "5.png",
+        "6.png",
       ];
 
       var currentImageIndex = 0;
@@ -34,11 +48,22 @@
         imageElement.src = imagePath;
       }
 
-      var imageChangeInterval = setInterval(changeImage, 1000);
+      var imageChangeInterval = setInterval(changeImage, 5000);
     </script>
   </head>
-
-  <body onresize="resizeTo(900,900)" onload="resizeTo(900,900)">
-    <img id="image" src="Msg1.png" alt="이미지" />
+  <style>
+    img {
+		background-size: cover;
+		width: 700px !important;
+		height: 700px !important;
+		float: left;
+		position: relative;
+	}
+  </style>
+  <body onresize="resizeTo(750,900)" onload="resizeTo(750,900)">
+    <audio autoplay loop>
+      <source src="videoplayback.mp3" type="audio/mpeg">
+    </audio>
+    <img id="image" src="1.png" alt="이미지" />
   </body>
 </html>
