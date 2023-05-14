@@ -47,7 +47,7 @@
 	      $('.box').attr('style', 'background-image: url("./Heart2.png");');
 	    }
 	    else if (lock == 0) {
-          $('.box').attr('style', 'background-image: url("./Msg2.png");');
+	      window.close()
         }
 	  });
 
@@ -80,6 +80,6 @@
   </style>
 
   <body onresize="resizeTo(450,900)" onload="resizeTo(450,900)">
-  	<div class="box box23 non1 non2 non3" style="background-image: url('./Heart2.png');"></div>
+  	<div class="box" style="background-image: url('./Heart2.png');"></div>
   </body>
 </html>
